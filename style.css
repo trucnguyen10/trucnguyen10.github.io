@@ -1,0 +1,194 @@
+/* Reset some default browser styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #cbe8cb, #52ddcf); /* Apply green gradient background */
+    color: #000; /* Set text color to black */
+}
+
+/* Style the header and navigation bar */
+header {
+    background-color: #333; /* Darken the header background */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Martian Mono', monospace;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+nav ul li a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+/* Style the sections */
+section {
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    background: linear-gradient(45deg, #d2fed2, #52ddcf); /* Apply green gradient background */
+}
+
+h1 {
+    font-size: 32px;
+    color: #000; /* Set the text color to black */
+    font-family: 'Martian Mono', monospace;
+}
+
+h2 {
+    font-size: 32px;
+    color: #000; /* Set the text color to black */
+    font-family: 'Martian Mono', monospace;
+}
+
+h3 {
+    font-size: 20px;
+    color: #000; /* Set the text color to black */
+    font-family: 'Martian Mono', monospace;
+}
+
+/* Style the card container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fcebf8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    transition: transform 0.3s ease; /* Add a subtle transform effect on hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+}
+
+/* Style links */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style for the timeline */
+.timeline {
+    position: relative;
+    margin-top: 20px;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #000; /* Set the timeline color to black */
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #000; /* Set the timeline connector color to black */
+}
+
+.timeline-item h2 {
+    font-size: 18px;
+    color: #000; /* Set the text color to black */
+    margin-bottom: 8px;
+}
+
+.timeline-item p {
+    margin: 0;
+    color: #555; /* Set the text color to a darker gray */
+    font-style: italic;
+}
+
+.timeline-item .location {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.timeline-item .technology {
+    color: #333; /* Dark gray color for technology */
+    font-style: normal;
+}
+
+/* Style for the card images */
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Add a subtle transform effect on hover */
+}
+
+.card:hover img {
+    transform: scale(1.05); /* Enlarge the image on hover */
+}
+
+/* CSS for the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the page content */
+body {
+    animation: fadeIn 5s ease-in-out;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-item {
+    flex-basis: calc(33.33% - 10px);
+    /* 33.33% width with a small gap between cards */
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
